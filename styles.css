@@ -5,6 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0;
+    animation: spin 7s linear infinite;
 }
 
 .head{
@@ -38,4 +39,55 @@ body{
     background-color: #c3661e;
     transform: translate(40px, -310px);
     border-radius: 40%;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+        background-color: #daf392;
+    }
+
+    25%{
+        background-color: #a2f1b4;
+    }
+
+    75%{
+        background-color: #f483b8;
+    }
+
+    100%{
+        transform: rotate(360deg);
+        background-color: #ff8e4d;
+    }
+}
+
+button{
+    animation: spin2 7s linear infinite;
+    position: fixed;
+    width: 600px;
+    height: 800px; 
+    border-radius: 10%;
+    background-color: #fa5ae2;
+    font-size: 50px;
+}
+
+@keyframes spin2 {
+    0%{
+        transform: rotate(0deg);
+        background-color: #e992ee;
+    }
+
+    25%{
+        background-color: #e41dc6;
+
+    }
+
+    75%{
+        background-color: #b740a5;
+    }
+
+    100%{
+        transform: rotate(-360deg);
+        background-color: #ef6fdc;
+    }
 }

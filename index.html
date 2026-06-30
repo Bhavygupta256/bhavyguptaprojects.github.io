@@ -7,11 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
     <h1>"SO FAR, SO GOOD!!"</h1>
     <div class="head"></div>
     <div class="belly"></div>
     <div class="left-leg"></div>
     <div class="right-leg"></div>
+    
+    <button id="start-button">Enter Website & Play Music</button>
+    <audio id="my-audio" loop>
+    <source src="Relax.mp3" type="audio/mp3">
+    </audio>
 
+    <script>
+        const button = document.getElementById('start-button');
+        const audio = document.getElementById('my-audio');
+
+        button.addEventListener('click', () => {
+            audio.play();
+            button.style.display = 'none'; // Hides the button after clicking
+        });
+    </script>
+    
 </body>
 </html>
